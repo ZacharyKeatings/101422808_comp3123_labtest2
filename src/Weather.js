@@ -9,7 +9,7 @@ const Weather = ({ city }) => {
     const fetchWeather = async () => {
       try {
         const response = await axios.get(
-          `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
+          `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
         );
         setWeatherData(response.data);
       } catch (error) {
@@ -39,7 +39,7 @@ const Weather = ({ city }) => {
 
       <div className="icon-container">
         <img
-          src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
+          src={`https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
           alt={weatherData.weather[0].description}
         />
       </div>
